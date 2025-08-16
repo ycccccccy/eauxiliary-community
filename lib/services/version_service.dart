@@ -7,7 +7,7 @@ import 'package:flutter/foundation.dart';
 class VersionService {
   // 版本号地址
   static const String versionCheckUrl =
-      'https://gitee.com/asdasasdasdasfsdf/version-check/raw/master/version.json';
+      'https://gitee.com/asdasasdasdasfsdf/version-check/raw/master/version_community.json';
 
   // 添加请求超时时间
   static const Duration timeoutDuration = Duration(seconds: 5);
