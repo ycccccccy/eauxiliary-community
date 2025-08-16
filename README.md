@@ -6,27 +6,19 @@
 [![GitHub stars](https://img.shields.io/github/stars/ycccccccy/eauxiliary-community)](https://github.com/ycccccccy/eauxiliary-community/stargazers)
 [![GitHub forks](https://img.shields.io/github/forks/ycccccccy/eauxiliary-community)](https://github.com/ycccccccy/eauxiliary-community/network)
 
-专为E听说软件设计的辅助工具，快速获取试题答案。
-
-## 📊 项目统计
-
-### 代码活跃度
 ![GitHub commit activity](https://img.shields.io/github/commit-activity/m/ycccccccy/eauxiliary-community)
 ![GitHub last commit](https://img.shields.io/github/last-commit/ycccccccy/eauxiliary-community)
 ![GitHub contributors](https://img.shields.io/github/contributors/ycccccccy/eauxiliary-community)
 
-### 代码统计
 ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/ycccccccy/eauxiliary-community)
 ![GitHub repo size](https://img.shields.io/github/repo-size/ycccccccy/eauxiliary-community)
 ![GitHub language count](https://img.shields.io/github/languages/count/ycccccccy/eauxiliary-community)
 
-### 近期更新
+专为E听说软件设计的辅助工具，快速获取试题答案。
 
 
-![GitHub commit activity graph](https://github-readme-activity-graph.vercel.app/graph?username=ycccccccy&repo=eauxiliary-community&theme=github-compact&hide_border=true)
 
-#### 语言分布
-![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=ycccccccy&repo=eauxiliary-community&layout=compact&theme=github-compact&hide_border=true)
+
 
 
 </details>
@@ -139,15 +131,9 @@ flutter build apk --release
 flutter build windows --release
 ```
 
-## 🏛️ 技术架构
+## 🏛️ 架构
 
-### 整体架构
-```
-┌─────────────────┐    ┌─────────────────┐    ┌─────────────────┐
-│   用户界面层     │    │   业务逻辑层     │    │   数据访问层     │
-│   (UI Layer)    │◄──►│ (Business Layer)│◄──►│ (Data Layer)    │
-└─────────────────┘    └─────────────────┘    └─────────────────┘
-```
+
 
 ### 数据
 1. 用户选择试题目录
@@ -155,7 +141,7 @@ flutter build windows --release
 3. 答案数据存储到本地缓存
 4. 用户界面展示解析后的答案
 
-## 📊 性能特点
+## 📊 性能
 
 ### 响应速度
 - **冷启动时间**：< 1秒
@@ -243,11 +229,15 @@ lib/
 
 ## 🔄 版本更新
 
+### v1.0.1
+- 修复了更新管道错误的问题
+
+
 ### v1.0.0 
-- ✨ 专注深圳高中英语听说考试
-- ✨ 简化用户界面，移除复杂功能
-- ✨ 即装即用，无需激活
-- ✨ 开源发布，欢迎社区参与
+-  专注深圳高中英语听说考试
+-  简化用户界面，移除复杂功能
+-  即装即用，无需激活
+-  开源发布，欢迎社区参与
 
 ---
 
