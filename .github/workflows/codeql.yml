@@ -1,0 +1,40 @@
+# CodeQL Workflow optimized for Dart-only analysis in a Flutter project.
+name: "CodeQL (Dart Only)"
+
+on:
+  push:
+    branches: [ "main", "dev" ]
+  pull_request:
+    branches: [ "main" ]
+  schedule:
+    - cron: '29 18 * * 4'
+
+jobs:
+  analyze:
+    name: Analyze (Dart)
+    runs-on: ubuntu-latest
+    permissions:
+      security-events: write
+      packages: read
+      actions: read
+      contents: read
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    # Initializes the CodeQL tools for scanning Dart.
+    - name: Initialize CodeQL
+      uses: github/codeql-action/init@v3
+      with:
+        languages: dart
+
+    # Autobuild works well for Dart-only analysis.
+    - name: Autobuild
+      uses: github/codeql-action/autobuild@v3
+
+    # Performs the actual CodeQL analysis.
+    - name: Perform CodeQL Analysis
+      uses: github/codeql-action/analyze@v3
+      with:
+        category: "/language:dart"
