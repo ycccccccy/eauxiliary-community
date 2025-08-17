@@ -14,13 +14,14 @@
    - 重现步骤
    - 预期行为 vs 实际行为
    - 相关截图或日志
+   - 应用版本号
 
 ### 提交代码
 
 #### 准备工作
 1. Fork本仓库到你的GitHub账户
 2. 克隆Fork的仓库到本地
-3. 设置开发环境（见README中的开发部分）
+3. 设置开发环境（见下文开发环境设置）
 
 #### 开发流程
 1. 创建新分支：`git checkout -b feature/your-feature-name`
@@ -36,6 +37,52 @@
 - 通过所有测试
 - 遵循代码规范
 - 更新相关文档
+- 确保代码能通过`flutter analyze`检查
+
+## 🛠️ 开发环境设置
+
+### 环境要求
+- **Flutter**: 3.0+ 
+- **Dart**: 3.0+
+- **IDE**: Android Studio / VS Code
+- **Android SDK**: API 21+ (Android 5.0+)
+- **Windows**: Windows 10+
+
+### 环境配置步骤
+
+#### 1. 安装Flutter
+```bash
+# 下载Flutter SDK
+git clone https://github.com/flutter/flutter.git
+export PATH="$PATH:`pwd`/flutter/bin"
+
+# 验证安装
+flutter doctor
+```
+
+#### 2. 克隆项目
+```bash
+# 克隆你的Fork
+git clone https://github.com/YOUR_USERNAME/eauxiliary-community.git
+cd eauxiliary-community
+
+# 添加上游仓库
+git remote add upstream https://github.com/ycccccccy/eauxiliary-community.git
+```
+
+#### 3. 安装依赖
+```bash
+flutter pub get
+```
+
+#### 4. 运行项目
+```bash
+# Android版本
+flutter run
+
+# Windows版本
+flutter run -d windows
+```
 
 ## 📝 代码规范
 
@@ -44,6 +91,7 @@
 - **格式**：使用`flutter format`格式化代码
 - **分析**：确保`flutter analyze`无错误
 - **测试**：为新功能编写测试
+- **分支命名**：使用描述性名称，如`feature/dark-mode`、`fix/login-bug`
 
 ### Dart代码规范
 ```dart
@@ -65,6 +113,13 @@ class ExampleClass {
 }
 ```
 
+### 文件命名规范
+- **Dart文件**: 使用小写字母和下划线，如`user_profile.dart`
+- **目录名**: 使用小写字母和下划线，如`user_management/`
+- **类名**: 使用大驼峰命名法，如`UserProfile`
+- **变量名**: 使用小驼峰命名法，如`userName`
+- **常量名**: 使用小写字母和下划线，如`max_retry_count`
+
 ### 提交信息规范
 使用[约定式提交](https://www.conventionalcommits.org/zh-hans/v1.0.0/)格式：
 
@@ -84,6 +139,8 @@ class ExampleClass {
 - `refactor`: 重构
 - `test`: 测试相关
 - `chore`: 构建过程或辅助工具的变动
+- `perf`: 性能优化
+- `ci`: CI/CD相关
 
 示例：
 ```
@@ -106,12 +163,21 @@ flutter test
 
 # 集成测试
 flutter test integration_test/
+
+# 代码覆盖率
+flutter test --coverage
 ```
 
 ### 编写测试
 - 为新功能编写单元测试
 - 为UI组件编写Widget测试
 - 为完整流程编写集成测试
+- 测试覆盖率应达到80%以上
+
+### 测试文件命名
+- 单元测试：`test/`目录下，文件名以`_test.dart`结尾
+- Widget测试：`test/widget_test/`目录下
+- 集成测试：`integration_test/`目录下
 
 ## 📚 文档
 
@@ -120,12 +186,14 @@ flutter test integration_test/
 - API或功能行为：更新README
 - 配置或安装：更新相关文档
 - 新功能：添加使用说明
+- 代码结构：更新项目结构说明
 
 ### 文档规范
 - 使用中文编写
 - 保持简洁明了
 - 包含代码示例
 - 更新目录和链接
+- 使用Markdown格式
 
 ## 🏷️ 发布流程
 
@@ -142,6 +210,8 @@ flutter test integration_test/
 - [ ] CHANGELOG已更新
 - [ ] 版本号已更新
 - [ ] 创建发布标签
+- [ ] 代码审查完成
+- [ ] 性能测试通过
 
 ## 🎯 优先级领域
 
@@ -152,16 +222,38 @@ flutter test integration_test/
 - **性能优化**：提升应用响应速度
 - **用户体验**：改善界面交互
 - **文档完善**：补充使用说明
+- **测试覆盖**：增加测试用例
 
 ### 中优先级
 - **代码重构**：提高代码质量
-- **测试覆盖**：增加测试用例
 - **无障碍支持**：改善可访问性
-- **国际化**：支持其他语言
+- **错误处理**：完善异常处理机制
+- **日志系统**：改进调试信息
 
 ### 低优先级
 - **新功能**：需要先讨论必要性
 - **大型重构**：需要详细设计文档
+- **国际化**：支持其他语言
+
+## 🔄 贡献工作流
+
+### 标准工作流
+1. **Fork仓库** → 克隆到本地
+2. **创建分支** → 基于`dev`分支
+3. **开发功能** → 遵循代码规范
+4. **编写测试** → 确保功能正确性
+5. **提交代码** → 使用规范提交信息
+6. **推送分支** → 到你的Fork
+7. **创建PR** → 提交到`dev`分支
+8. **代码审查** → 等待维护者审查
+9. **合并代码** → 审查通过后合并
+
+### 分支策略
+- `main`: 生产环境，只接受来自`dev`的合并
+- `dev`: 开发分支，接受所有贡献
+- `feature/*`: 功能开发分支
+- `fix/*`: 问题修复分支
+- `docs/*`: 文档更新分支
 
 ## 💬 交流渠道
 
