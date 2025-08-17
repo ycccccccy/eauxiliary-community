@@ -1,0 +1,15 @@
+# .github/dependabot.yml
+
+version: 2
+updates:
+  # 规则一：检查 Flutter/Dart 的 pub 包更新
+  - package-ecosystem: "pub"
+    directory: "/" 
+    schedule:
+      interval: "weekly"
+
+  # 规则二：检查 GitHub Actions 工作流的更新
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
