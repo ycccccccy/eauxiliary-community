@@ -95,17 +95,16 @@ class _HelpScreenState extends State<HelpScreen>
                     items: [
                       '安装并启动 Eauxiliary。',
                       '首次进入会显示引导页，按提示完成隐私协议确认。',
-                      'Android：建议开启 Shizuku 模式以读取 ETS 目录；Windows：应用会自动定位 %APPDATA%/ETS。',
                       '返回主界面后，应用会自动扫描并展示最近的试题组。',
                     ],
                   ),
                   _HelpSection(
                     title: '路径初始化失败怎么办？',
                     items: [
-                      '确认题库已正确下载并存在于设备上：Android 通常位于 /storage/emulated/0/Android/data/com.ets100.secondary/files/Download/ETS_SECONDARY/resource。',
-                      'Android 13+ 无法直接访问外部存储：请在设置中启用 Shizuku 模式以提升访问权限。',
-                      'Windows：确保 %APPDATA%/ETS 下的题库文件夹可被访问且包含 content.json。',
-                      '仍为空？在主界面下拉刷新，或在设置中清除缓存后重试。',
+                      '确认题库已正确下载并存在于设备上',
+                      'Android 13+ 无法直接访问外部存储，当前使用FileService的内部漏洞访问，若失败请在设置中启用 Shizuku 模式以提升访问权限。',
+                      'Windows：确保你真的下了题目',
+                      '仍为空？在主界面下拉刷新，或在E听说设置中清除缓存后重试。',
                     ],
                   ),
                   _HelpSection(
@@ -115,13 +114,6 @@ class _HelpScreenState extends State<HelpScreen>
                       'Q: 为何只显示一个试题组？\nA: 社区版默认只展示最近的一个试题组。',
                       'Q: 如何再次查看本页面？\nA: 在设置页「帮助与支持」中进入。',
                       'Q: 如何保存答案图片？\nA: 在答案页右上角点击分享按钮，Android 保存到相册，Windows 保存到下载目录。',
-                    ],
-                  ),
-                  _HelpSection(
-                    title: '建议的目录结构（Android）',
-                    items: [
-                      '.../Android/data/com.ets100.secondary/files/Download/ETS_SECONDARY/resource/<题目ID>/content.json',
-                      '若路径包含“Android”被分隔（A\u200Bndroid），应用会自动尝试修复。',
                     ],
                   ),
                 ],
