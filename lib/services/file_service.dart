@@ -1,7 +1,6 @@
 // lib/services/file_service.dart
 
 import 'package:eauxiliary/utils/simple_storage.dart';
-import 'package:http/http.dart' as http;
 import 'dart:convert';
 import 'dart:io';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -668,7 +667,6 @@ class FileService {
       for (int i = 0; i < groupedFolders.length; i++) {
         final group = groupedFolders[i];
         String tag;
-        final folderNames = group.map((f) => f.name.split('/').last).toList();
 
         // 只支持深圳高中
         switch (group.length) {
@@ -1692,7 +1690,6 @@ class FileService {
               // 添加每个content文件夹作为单独项
               for (var contentFolder in contentFolders) {
                 final contentFolderPath = contentFolder.path;
-                final contentFolderName = path.basename(contentFolderPath);
 
                 result.add(FolderItem(
                   name: contentFolderPath,
@@ -1762,7 +1759,6 @@ class FileService {
       // 直接处理每个content文件夹
       for (final folderItem in folders) {
         final contentFolderPath = folderItem.name;
-        final contentFolderName = path.basename(contentFolderPath);
 
         // 验证路径是否存在
         final contentFolder = Directory(contentFolderPath);
