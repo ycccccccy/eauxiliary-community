@@ -1,40 +1,33 @@
-# CodeQL Workflow optimized for Dart-only analysis in a Flutter project.
-name: "CodeQL (Dart Only)"
+# .github/workflows/dart-analysis.yml
+
+name: 'Dart CI'
 
 on:
   push:
-    branches: [ "main", "dev" ]
+    branches: [ "main" ]
   pull_request:
     branches: [ "main" ]
-  schedule:
-    - cron: '29 18 * * 4'
 
 jobs:
   analyze:
-    name: Analyze (Dart)
+    name: Analyze Dart Code
     runs-on: ubuntu-latest
-    permissions:
-      security-events: write
-      packages: read
-      actions: read
-      contents: read
-
     steps:
-    - name: Checkout repository
-      uses: actions/checkout@v4
+      # 1. 检出你的代码
+      - uses: actions/checkout@v4
 
-    # Initializes the CodeQL tools for scanning Dart.
-    - name: Initialize CodeQL
-      uses: github/codeql-action/init@v3
-      with:
-        languages: dart
+      # 2. 设置 Dart SDK
+      - uses: dart-lang/setup-dart@v1
+      
+      # (如果是 Flutter 项目，请使用 flutter-action)
+      # - uses: subosito/flutter-action@v2
+      #   with:
+      #     flutter-version: '3.13.9' # 或者你需要的版本
 
-    # Autobuild works well for Dart-only analysis.
-    - name: Autobuild
-      uses: github/codeql-action/autobuild@v3
+      # 3. 安装依赖
+      - name: Install dependencies
+        run: dart pub get # 如果是 Flutter 项目, 运行 flutter pub get
 
-    # Performs the actual CodeQL analysis.
-    - name: Perform CodeQL Analysis
-      uses: github/codeql-action/analyze@v3
-      with:
-        category: "/language:dart"
+      # 4. 运行代码分析
+      - name: Analyze project source
+        run: dart analyze --fatal-infos # 如果是 Flutter 项目, 运行 flutter analyze
