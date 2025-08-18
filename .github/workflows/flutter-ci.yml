@@ -1,0 +1,25 @@
+# .github/workflows/flutter-ci.yml
+
+name: 'Flutter CI'
+
+on:
+  push:
+    branches: [ "main", "dev" ] 
+  pull_request:
+    branches: [ "main" ] 
+
+jobs:
+  analyze:
+    name: Analyze Flutter Code
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: subosito/flutter-action@v2
+        with:
+          channel: 'stable' 
+
+      - name: Install dependencies
+        run: flutter pub get
+
+      - name: Analyze project source
+        run: flutter analyze
