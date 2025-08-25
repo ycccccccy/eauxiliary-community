@@ -145,8 +145,9 @@ lib/
 │   ├── settings_screen.dart # 设置页面
 │   └── onboarding/         # 引导页面
 ├── services/               # 业务服务
-│   ├── file_service.dart   # 文件操作服务
-│   └── api_service.dart    # API服务
+│   ├── file_service.dart         # 文件操作服务
+│   ├── shizuku_file_service.dart # Shizuku 文件操作服务
+│   └── version_service.dart      # 版本检查服务
 ├── utils/                  # 工具类
 │   ├── helpers.dart        # 辅助函数
 │   └── utils.dart         # 通用工具
