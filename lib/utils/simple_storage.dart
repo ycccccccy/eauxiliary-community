@@ -148,8 +148,8 @@ class SimpleStorage {
         }
       }
 
-      // 强制保存更改
-      await prefs.commit();
+      // 重新加载偏好设置以确保删除操作被持久化
+      await prefs.reload();
 
       debugPrint('SimpleStorage: 已删除 $removedCount/${cacheKeys.length} 个缓存项');
 
