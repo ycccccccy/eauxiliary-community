@@ -1,270 +1,125 @@
 # Eauxiliary 社区版
 
 [![Flutter](https://img.shields.io/badge/Flutter-3.0+-blue.svg)](https://flutter.dev/)
-[![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 [![Platform](https://img.shields.io/badge/Platform-Android%20%7C%20Windows-lightgrey.svg)](https://flutter.dev/docs/development/tools/sdk/release-notes)
 [![GitHub stars](https://img.shields.io/github/stars/ycccccccy/eauxiliary-community)](https://github.com/ycccccccy/eauxiliary-community/stargazers)
-[![GitHub forks](https://img.shields.io/github/forks/ycccccccy/eauxiliary-community)](https://github.com/ycccccccy/eauxiliary-community/network)
-
-![GitHub commit activity](https://img.shields.io/github/commit-activity/m/ycccccccy/eauxiliary-community)
-![GitHub last commit](https://img.shields.io/github/last-commit/ycccccccy/eauxiliary-community)
-![GitHub contributors](https://img.shields.io/github/contributors/ycccccccy/eauxiliary-community)
-
-![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/ycccccccy/eauxiliary-community)
-![GitHub repo size](https://img.shields.io/github/repo-size/ycccccccy/eauxiliary-community)
-![GitHub language count](https://img.shields.io/github/languages/count/ycccccccy/eauxiliary-community)
+[![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
 专为E听说软件设计的辅助工具，快速获取试题答案。
 
-如果你需要支持北京初中、高中和广东初中、高中的专业版，请访问 [EAuxiliary 官网](https://www.gzzx.top/) 获取更多信息和下载链接
-</details>
+> **专业版提醒**: 如果您需要支持北京初中、高中和广东初中、高中的版本，请访问 [EAuxiliary 官网](https://www.gzzx.top/) 获取。
+
+> **注意**: 由于Android系统的方案基于原生的Fileservice漏洞实现读取，部分Android12-与15+的系统可能无法正常使用
+
+---
 
 ##  主要特点
 
-###  核心功能
-- **智能答案解析**：能够自动识别题目类型，并以清晰的格式展示答案
-- **简洁的用户界面**：采用现代化的Material Design设计，支持深色和浅色主题切换
-- **跨平台支持**：同时支持Android和Windows平台，满足不同用户的使用需求
-
-###  使用体验
-- **即装即用**：无需复杂配置，安装后就能直接使用
-- **灵活的访问方式**：支持自动访问和Shizuku访问两种方式
-- **智能缓存机制**：自动缓存已解析的答案，提升后续访问速度
-
-###  技术亮点
-- **Flutter框架**：基于最新的Flutter技术构建，确保跨平台体验的一致性
-- **Provider状态管理**：使用官方推荐的状态管理方案，代码结构清晰
-- **响应式设计**：能够适配各种屏幕尺寸和设备类型
+- **智能答案解析**：自动识别题目类型，并以清晰的格式展示答案。
+- **简洁的用户界面**：采用现代化的 Material Design，支持深色和浅色主题。
+- **跨平台支持**：同时支持 Android 和 Windows 平台。
+- **即装即用**：无需复杂配置，安装后即可直接使用。
+- **智能缓存机制**：自动缓存已解析的答案，提升后续访问速度。
 
 ##  安装说明
 
-### Android用户
-1. 从[Releases页面](https://github.com/ycccccccy/eauxiliary-community/releases)下载最新的APK文件
-2. 在设备上开启"未知来源"应用安装权限
-3. 安装下载的APK文件
+### Android
+1. 前往 [Releases 页面](https://github.com/ycccccccy/eauxiliary-community/releases)下载最新的 `.apk` 文件。
+2. 在设备上开启“允许安装未知来源应用”的权限。
+3. 点击下载的 APK 文件进行安装。
 
-### Windows用户
-1. 从[Releases页面](https://github.com/ycccccccy/eauxiliary-community/releases)下载Windows版本
-2. 解压文件并运行可执行程序
+### Windows
+1. 前往 [Releases 页面](https://github.com/ycccccccy/eauxiliary-community/releases)下载最新的 Windows 版本压缩包。
+2. 解压文件，并运行其中的可执行程序。
 
 ##  使用指南
 
-### 第一次使用
-1. **启动应用**：首次启动会进入引导页面
+### 首次启动
+1. **启动应用**：首次启动会进入引导页面，请根据提示完成授权。
 2. **选择访问方式**：
-   - **自动选择目录**：适合大多数用户，操作简单
-   - **使用Shizuku**：需要额外配置，但能获得更完整的访问权限
-
-### 自动选择目录方式
-1. 只需要按照应用内提示即可自动确认目录
-
-### 使用Shizuku
-1. 安装[Shizuku应用](https://github.com/RikkaApps/Shizuku)
-2. 按照Shizuku的说明启动服务（需要ADB或Root权限）
-3. 返回本应用，点击"使用Shizuku访问"
+   - **自动选择目录**：推荐大多数用户使用，操作简单。
+   - **使用 Shizuku**：需要额外配置，但能获得更完整的访问权限。
 
 ### 查看答案
-1. 主页面会显示最新的试题组
-2. 点击试题卡片进入答案详情页面
+1. 主页面会自动列出最新的试题组。
+2. 点击任意试题卡片即可进入答案详情页面。
 
-##  常见问题
+<details>
+<summary><b>👉 点击查看 Shizuku 的配置方法</b></summary>
 
-### 应用无法启动
-- 确保设备支持Flutter应用
-- 检查是否授予了必要的权限
-- 尝试重新安装应用
+1. 在您的设备上安装 [Shizuku 应用](https://github.com/RikkaApps/Shizuku)。
+2. 根据 Shizuku 的官方说明启动服务（通常需要通过无线调试或 Root 权限）。
+3. 返回 Eauxiliary，在引导页或设置中选择“使用 Shizuku 访问”并完成授权。
+</details>
 
-### 找不到试题文件
-- 确认文件路径是否正确
-- 检查文件是否完整复制
-- 尝试使用Shizuku方式访问
+## ❓ 常见问题 (FAQ)
 
-### 答案显示异常
-- 清除应用缓存
-- 重新选择试题目录
-- 检查试题文件格式
+- **应用无法启动？**
+  - 确保设备支持 Flutter 应用，并尝试重新安装。
+- **找不到试题文件？**
+  - 确认E听说软件已下载试题并且保存在设备上，或尝试使用 Shizuku 方式访问。
+- **答案显示异常？**
+  - 尝试在应用内清除缓存，然后重新选择试题目录。
 
-### 性能问题
-- 关闭其他后台应用
-- 清理设备存储空间
-- 重启应用
+## 🛠️ 参与开发
 
-##  开发环境
+我们欢迎任何形式的贡献！无论是代码提交、功能建议还是 Bug 反馈，都对项目至关重要。
 
-### 环境要求
+### 开发环境
 - Flutter 3.0+
 - Dart 3.0+
 - Android Studio / VS Code
-- Android SDK
-- Visual Studio
-
-### 获取项目代码
-```bash
-git clone https://github.com/ycccccccy/eauxiliary-community.git
-cd eauxiliary-community
-```
-
-### 安装项目依赖
-```bash
-flutter pub get
-```
+- Android SDK / Visual Studio
 
 ### 运行项目
 ```bash
-# Android版本
-flutter run
+# 1. 克隆仓库
+git clone https://github.com/ycccccccy/eauxiliary-community.git
+cd eauxiliary-community
 
-# Windows版本
-flutter run -d windows
+# 2. 安装依赖
+flutter pub get
+
+# 3. 运行应用
+flutter run # 运行 Android 版本
+flutter run -d windows # 运行 Windows 版本
 ```
 
-### 构建发布版本
-```bash
-# Android APK
-flutter build apk --release
+### 贡献流程
+我们采用标准的 `Fork & Pull Request` 工作流，所有开发都在 `dev` 分支进行。
+1. **Fork** 本仓库。
+2. 基于 `dev` 分支创建您的新特性分支 (`git checkout -b feature/my-new-feature upstream/dev`)。
+3. 提交您的代码。
+4. 创建一个 Pull Request，目标分支请务必选择本仓库的 `dev` 分支。
 
-# Windows版本
-flutter build windows --release
-```
+> 详细流程请参考 [**贡献指南**](CONTRIBUTING.md)。
 
+## 📁 项目结构
 
-##  项目结构
+<details>
+<summary><b>👉 点击展开查看项目文件结构</b></summary>
 
 ```
 lib/
 ├── main.dart                 # 应用入口点
 ├── models/                   # 数据模型
-│   ├── folder_item.dart     # 文件夹项目模型
-│   └── user.dart           # 用户模型
-├── providers/               # 状态管理
-│   ├── answer_provider.dart # 答案数据管理
-│   └── settings_provider.dart # 设置管理
-├── screens/                 # 页面组件
-│   ├── main_screen.dart    # 主页面
-│   ├── answer_screen.dart  # 答案显示页面
-│   ├── settings_screen.dart # 设置页面
-│   └── onboarding/         # 引导页面
-├── services/               # 业务服务
-│   ├── file_service.dart         # 文件操作服务
-│   ├── shizuku_file_service.dart # Shizuku 文件操作服务
-│   └── version_service.dart      # 版本检查服务
-├── utils/                  # 工具类
-│   ├── helpers.dart        # 辅助函数
-│   └── utils.dart         # 通用工具
-└── widgets/               # 可复用组件
-    ├── group_card.dart    # 试题组卡片
-    └── loading_indicator.dart # 加载指示器
+├── providers/                # 状态管理
+├── screens/                  # 页面组件
+├── services/                 # 业务服务
+├── utils/                    # 工具类
+└── widgets/                  # 可复用组件
 ```
+</details>
 
-##  参与贡献
+## 💬 社区与支持
 
-我们非常欢迎并感谢每一位愿意为 Eauxiliary 社区版贡献力量的开发者！无论是修复一个微小的 Bug，还是实现一个全新的功能，您的每一次贡献都至关重要。
+- **反馈问题**: [提交 Issue](https://github.com/ycccccccy/eauxiliary-community/issues)
+- **参与讨论**: [前往 Discussions](https://github.com/ycccccccy/eauxiliary-community/discussions)
+- **查看版本更新**: [Releases](https://github.com/ycccccccy/eauxiliary-community/releases)
 
-为了维护项目的稳定性和代码质量，我们采用了一套规范的贡献流程。请您在开始前仔细阅读以下指南。
+## 📄 许可证
 
-### 核心开发流程
-
-本项目有两个核心分支，各自承担不同职责：
--   `main` 分支：存放最稳定的、可随时发布的正式版本代码。此分支受到严格保护，只接受来自 `dev` 分支的合并。
--   `dev` 分支：日常开发和功能集成的分支。**所有的贡献都应提交到此分支**。
-
-### 贡献步骤
-
-我们采用标准的 **Fork & Pull Request** 工作流。具体步骤如下：
-
-#### 1. Fork 本仓库
-点击仓库页面右上角的 "Fork" 按钮，将本仓库复制到您自己的 GitHub 账户下。
-
-#### 2. 克隆您的 Fork
-将您 Fork 后的仓库克隆到您的本地电脑。
-```bash
-git clone https://github.com/YOUR_USERNAME/eauxiliary-community.git
-cd eauxiliary-community
-```
-
-#### 3. 创建您的开发分支
-请务必基于 dev 分支来创建您的新分支。这非常重要！
-
-```bash
-# 首次贡献，建议添加上游仓库方便同步
-git remote add upstream https://github.com/ycccccccy/eauxiliary-community.git
-
-# 从上游仓库拉取最新的 dev 分支状态
-git fetch upstream
-
-# 基于最新的 dev 分支创建您的新分支
-git checkout -b feature/your-amazing-feature upstream/dev
-```
-
-请将 `feature/your-amazing-feature` 替换为您分支的描述性名称（例如 `fix/login-bug` 或 `feat/dark-mode-optimizations`）。
-
-#### 4. 进行编码和提交
-在您的新分支上进行代码修改。完成后，清晰地提交您的更改。
-
-```bash
-git add .
-git commit -m "feat: Add some amazing feature"
-```
-
-#### 5. 推送到您的 Fork
-将您的本地分支推送到您在 GitHub 上的 Fork 仓库。
-
-```bash
-git push origin feature/your-amazing-feature
-```
-
-#### 6. 创建 Pull Request (PR)
-回到您在 GitHub 的 Fork 仓库页面，您会看到一个提示，引导您创建一个 Pull Request。
-
-- 请确保您的 PR 是从您的 `feature/your-amazing-feature` 分支提交到本仓库 (`ycccccccy/eauxiliary-community`) 的 `dev` 分支。**请勿向 main 分支提交！**
-- 在 PR 的描述中，请清晰地说明您做了哪些更改，以及为什么要这样做。
-
-### 自动化审查
-
-在您提交 PR 后，GitHub Actions 会自动运行一系列检查，包括代码格式化、静态分析 (CodeQL) 和安全扫描。请确保您的 PR 能够通过所有的自动化检查，这是代码被合并的前提。
-
-### 代码规范
-- 使用中文注释，让代码更容易理解
-- 遵循Flutter官方的代码规范
-- 确保代码能通过`flutter analyze`检查
-- 为新功能添加适当的单元测试
-
-##  社区信息
-
-### 相关链接
-- **问题反馈**：[Issues](https://github.com/ycccccccy/eauxiliary-community/issues)
-- **功能讨论**：[Discussions](https://github.com/ycccccccy/eauxiliary-community/discussions)
-- **贡献指南**：[CONTRIBUTING](CONTRIBUTING.md)
-
-##  许可证
-
-本项目采用MIT许可证开源 - 查看[LICENSE](LICENSE)文件了解具体条款。
-
-##  致谢
-
-感谢[Flutter团队](https://flutter.dev/)提供的优秀跨平台开发框架，以及所有为项目做出贡献的开发者。
-
-##  获取帮助
-
-如果你在使用过程中遇到问题或有建议，可以：
-
-1. 查看[常见问题](https://github.com/ycccccccy/eauxiliary-community/wiki/FAQ)
-2. 搜索现有的[Issues](https://github.com/ycccccccy/eauxiliary-community/issues)
-3. 创建新的Issue详细描述你的问题
-4. 在[Discussions](https://github.com/ycccccccy/eauxiliary-community/discussions)中寻求帮助
-
-##  版本更新
-
-### v1.0.1
-- 修复了更新管道错误的问题
-
-
-### v1.0.0 
--  专注深圳高中英语听说考试
--  简化用户界面，移除复杂功能
--  即装即用，无需激活
--  开源发布，欢迎社区参与
+本项目采用 [MIT License](LICENSE) 开源。
 
 ---
-
 **重要提醒**：本工具仅供学习参考使用，请遵守相关考试规定和学校政策。
