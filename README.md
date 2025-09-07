@@ -1,4 +1,4 @@
-# Eauxiliary 社区版
+# Eauxiliary
 
 [![Flutter](https://img.shields.io/badge/Flutter-3.0+-blue.svg)](https://flutter.dev/)
 [![Platform](https://img.shields.io/badge/Platform-Android%20%7C%20Windows-lightgrey.svg)](https://flutter.dev/docs/development/tools/sdk/release-notes)
@@ -45,14 +45,14 @@
 2. 点击任意试题卡片即可进入答案详情页面。
 
 <details>
-<summary><b>👉 点击查看 Shizuku 的配置方法</b></summary>
+<summary><b> 点击查看 Shizuku 的配置方法</b></summary>
 
 1. 在您的设备上安装 [Shizuku 应用](https://github.com/RikkaApps/Shizuku)。
 2. 根据 Shizuku 的官方说明启动服务（通常需要通过无线调试或 Root 权限）。
 3. 返回 Eauxiliary，在引导页或设置中选择“使用 Shizuku 访问”并完成授权。
 </details>
 
-## ❓ 常见问题 (FAQ)
+##  常见问题 (FAQ)
 
 - **应用无法启动？**
   - 确保设备支持 Flutter 应用，并尝试重新安装。
@@ -94,7 +94,7 @@ flutter run -d windows # 运行 Windows 版本
 
 > 详细流程请参考 [**贡献指南**](CONTRIBUTING.md)。
 
-## 📁 项目结构
+##  项目结构
 
 <details>
 <summary><b>👉 点击展开查看项目文件结构</b></summary>
@@ -111,13 +111,13 @@ lib/
 ```
 </details>
 
-## 💬 社区与支持
+##  支持
 
 - **反馈问题**: [提交 Issue](https://github.com/ycccccccy/eauxiliary-community/issues)
 - **参与讨论**: [前往 Discussions](https://github.com/ycccccccy/eauxiliary-community/discussions)
 - **查看版本更新**: [Releases](https://github.com/ycccccccy/eauxiliary-community/releases)
 
-## 📄 许可证
+##  许可证
 
 本项目采用 [MIT License](LICENSE) 开源。
 
