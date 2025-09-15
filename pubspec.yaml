@@ -14,7 +14,7 @@ dependencies:
   file_picker: ^10.3.2
   provider: ^6.1.1
   url_launcher: ^6.2.5
-  package_info_plus: ^8.3.0
+  package_info_plus: ^9.0.0
   filesystem_picker: ^4.1.0
   share_plus: ^11.1.0
   shizuku_api: ^1.2.1
